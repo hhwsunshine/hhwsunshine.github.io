@@ -1,4 +1,533 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="hhw"><meta name="keywords" content=""><title>Python进阶 ~ hhw博客</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>hhwsunshine's blog</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/">首页</a></li><li class="nav-item"><a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"><a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"><a class="nav-link" href="/links/">友链</a></li><li class="nav-item"><a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/post_page.png) no-repeat center center;background-size:cover;background-attachment:scroll"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp; 星期四, 二月 13日 2020, 9:11 上午</p><p>&nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">3 字 </span>&nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">1 分钟 </span>&nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp; <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次 </span>&nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><h2 id="更新中…"><a href="#更新中…" class="headerlink" title="更新中…"></a>更新中…</h2><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/python">python</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"><br><br><div id="vcomments" style="width:90%;margin:0 auto"></div><script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script defer src="//unpkg.com/valine/dist/Valine.min.js"></script><script>var notify=!1,verify=!1,oldLoad=window.onload;window.onload=function(){new Valine({el:"#vcomments",notify:notify,verify:verify,app_id:"Q7daliAwM6QkVFJwlwVmU12t-gzGzoHsz",app_key:"OWkCjqwgMVA17MQI9vOGwkru",placeholder:"说点什么",avatar:"retro",meta:["nick","mail","link"],pageSize:"10"}),oldLoad&&oldLoad()}</script><noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments powered by Valine.</a></noscript></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">搜索</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">关键词</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><b>Fluid</b></a><br>&nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp; &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 <span id="busuanzi_value_site_uv"></span> 人&nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","Python进阶&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>anchors.options = {
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="hhw"><meta name="keywords" content=""><title>Python进阶 ~ hhw博客</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>hhwsunshine's blog</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/">首页</a></li><li class="nav-item"><a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"><a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"><a class="nav-link" href="/links/">友链</a></li><li class="nav-item"><a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/post_page.png) no-repeat center center;background-size:cover;background-attachment:scroll"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp; 星期四, 二月 13日 2020, 9:11 上午</p><p>&nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">4.4k 字 </span>&nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">21 分钟 </span>&nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp; <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次 </span>&nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><h1 id="数据容器"><a href="#数据容器" class="headerlink" title="数据容器"></a>数据容器</h1><p><strong>List</strong><br><strong>迭代</strong></p><pre><code class="python">li = [&#39;umaru&#39;, &#39;ebina&#39;, &#39;tachibana&#39;]
+for e in li:
+    print(li)
+# umaru ebina tachibana</code></pre><p><strong>同时迭代元素与其索引</strong><br>用 enumerate 即可</p><pre><code class="python">li = [&#39;umaru&#39;, &#39;ebina&#39;, &#39;tachibana&#39;]
+print([f&#39;{i+1}. {elem}&#39; for i, elem in enumerate(li)])
+# [&#39;1. umaru&#39;, &#39;2. ebina&#39;, &#39;3. tachibana&#39;]</code></pre><p><strong>同时迭代 2 个以上的 iterable</strong><br>用 zip 即可</p><pre><code class="python">subjects = (&#39;nino&#39;, &#39;miku&#39;, &#39;itsuki&#39;)
+predicates = (&#39;saikou&#39;, &#39;ore no yome&#39;, &#39;is sky&#39;)
+print([f&#39;{s} {p}&#39; for s, p in zip(subjects, predicates)])
+# [&#39;nino saikou&#39;, &#39;miku ore no yome&#39;, &#39;itsuki is sky&#39;]</code></pre><p><strong>iterable 解包</strong><br>最典型的例子就是 2 数交换</p><pre><code class="python">a, b = b, a
+# 等价于 a, b = (b, a)</code></pre><p>用星号运算符解包可以获取剩余的元素</p><pre><code class="python">first, *rest = [1, 2, 3, 4]
+first
+# 1
+rest
+# [2, 3, 4]</code></pre><p>用下划线可以忽略某个变量</p><pre><code class="python">filename, _ = &#39;eroge.exe&#39;.split(&#39;.&#39;)
+filename
+# &#39;eroge&#39;</code></pre><p><strong>Dict</strong><br><strong>迭代</strong></p><pre><code class="python">d = {&#39;name&#39;: &#39;sekiro&#39;, &#39;hobby&#39;: &#39;blacksmithing&#39;, &#39;tendency&#39;: &#39;death&#39;}
+[key for key in d.keys()]
+# [&#39;name&#39;, &#39;hobby&#39;, &#39;tendency&#39;]
+[value for value in d.values()]
+# [&#39;sekiro&#39;, &#39;blacksmithing&#39;, &#39;death&#39;]
+[f&#39;{key}: {value}&#39; for key, value in d.items()]
+# [&#39;name: sekiro&#39;, &#39;hobby: blacksmithing&#39;, &#39;tendency: death&#39;]</code></pre><p><strong>缺失键处理</strong><br>get 返回键值，如果键不在字典中，将会返回 None ，可自行设定一个默认值</p><pre><code class="python">d = {&#39;name&#39;: &#39;okabe rintaro&#39;, &#39;motto&#39;: &#39;elpsycongroo&#39;}
+d.get(&#39;job&#39;, &#39;mad scientist&#39;)
+# mad scientist</code></pre><p>setdefault 返回键值，如果键不在字典中，将会添加它并设置一个默认值</p><pre><code class="python">d = {&#39;name&#39;: &#39;okabe rintaro&#39;, &#39;motto&#39;: &#39;elpsycongroo&#39;}
+d.setdefault(&#39;job&#39;, &#39;mad scientist&#39;)
+# mad scientist
+d
+# {&#39;name&#39;: &#39;okabe rintaro&#39;, &#39;motto&#39;: &#39;elpsycongroo&#39;, &#39;job&#39;: &#39;mad scientist&#39;}</code></pre><h1 id="语言专属特性"><a href="#语言专属特性" class="headerlink" title="语言专属特性"></a>语言专属特性</h1><p><strong>推导式</strong><br>推导式是一种快速构建可迭代对象的方法，因此凡是可迭代的对象都支持推导式</p><p><strong>列表推导式</strong><br>获取 0-10 内的所有偶数</p><pre><code class="python">even = [i for i in range(10) if not i % 2]
+even
+# [0, 2, 4, 6, 8]</code></pre><p><strong>字典推导式</strong><br>将装满元组的列表转换为字典</p><pre><code class="python">SEIREI = [(0, &#39;takamiya mio&#39;), (1, &#39;tobiichi origami&#39;), (2, &#39;honjou nia&#39;), (3, &#39;tokisaki kurumi&#39;), (4, &#39;yoshino&#39;), (5, &#39;itsuka kotori&#39;), (6, &#39;hoshimiya mukuro&#39;), (7, &#39;natsumi&#39;), (8, &#39;yamai&#39;), (9, &#39;izayoi miku&#39;), (10, &#39;yatogami tohka&#39;)]
+seirei_code = {seirei: code for code, seirei in SEIREI}
+seirei_code
+# {&#39;takamiya mio&#39;: 0, &#39;tobiichi origami&#39;: 1, &#39;honjou nia&#39;: 2, &#39;tokisaki kurumi&#39;: 3, &#39;yoshino&#39;: 4, &#39;itsuka kotori&#39;: 5, &#39;hoshimiya mukuro&#39;: 6, &#39;natsumi&#39;: 7, &#39;yamai&#39;: 8, &#39;izayoi miku&#39;: 9, &#39;yatogami tohka&#39;: 10}
+{code: seirei.upper() for seirei, code in seirei_code.items() if code &gt; 6}
+# {7: &#39;NATSUMI&#39;, 8: &#39;YAMAI&#39;, 9: &#39;IZAYOI MIKU&#39;, 10: &#39;YATOGAMI TOUKA&#39;}</code></pre><p><strong>合推导式</strong><br>求所有数字的平方并去除重复元素</p><pre><code class="python">{x ** 2 for x in [1, 2, 2, 3, 3]}
+# {1, 4, 9}</code></pre><p><strong>生成器表达式</strong><br>求 0-10 内的所有偶数的和</p><pre><code class="python">even_sum_under_10 = sum(i for i in range(11) if not i % 2)
+even_sum_under_10
+# 30</code></pre><p><strong>星号和双星号</strong></p><p><strong>数据容器的合并</strong></p><pre><code class="python">l1 = [&#39;kaguya&#39;, &#39;miyuki&#39;]
+l2 = [&#39;chika&#39;, &#39;ishigami&#39;]
+[*l1, *l2]
+# [&#39;kaguya&#39;, &#39;miyuki&#39;, &#39;chika&#39;, &#39;ishigami&#39;]
+d1 = {&#39;name&#39;: &#39;rimuru&#39;}
+d2 = {&#39;kind&#39;: &#39;slime&#39;}
+{**d1, **d2}
+# {&#39;name&#39;: &#39;rimuru&#39;, &#39;kind&#39;: &#39;slime&#39;}</code></pre><p><strong>函数参数的打包与解包</strong></p><pre><code class="python"># 打包
+def foo(*args):
+    print(args)
+foo(1, 2)
+# (1, 2)
+
+def bar(**kwargs):
+    print(kwargs)
+bar(name=&#39;hayasaka&#39;, job=&#39;maid&#39;)
+# {&#39;name&#39;: &#39;hayasaka&#39;, &#39;job&#39;: &#39;maid&#39;}
+
+# 解包
+t = (10, 3)
+quotient, remainder = divmod(*t)
+quotient
+# 商：3
+remainder
+# 余：1</code></pre><p><strong>装饰器</strong><br>装饰器是一个可调用的对象，顾名思义它能够装饰在某个可调用的对象上，给它增加额外的功能</p><p>常用于缓存、权限校验、日志记录、性能测试、事务处理等场景</p><p>以下实现了一个简单的日志装饰器，能打印出函数的执行时间、函数名、函数参数和执行结果</p><pre><code class="python">import time
+from functools import wraps
+
+def clock(func):
+    @wraps(func) # 防止被装饰函数的属性被wrapper覆盖
+    def wrapper(*args, **kwargs):
+        t0 = time.perf_counter()
+        result = func(*args, **kwargs) # 由于闭包，wrapper函数包含了自由变量func
+        elapsed = time.perf_counter() - t0
+        name = func.__name__
+        args = &#39;, &#39;.join(repr(arg) for arg in args)
+        kwargs = &#39;, &#39;.join(f&#39;{k}={w}&#39; for k, w in sorted(kwargs.items()))
+        all_args_str = &#39;, &#39;.join(astr for astr in [args_str, kwargs_str] if astr)
+        print(f&#39;[{elapsed:.8f}s] {name}({all_args_str}) -&gt; {result}&#39;)
+        return result
+    return wrapper # 返回内部函数，取代被装饰的函数
+
+@clock
+def factorial(n: int) -&gt; int:
+    return 1 if n &lt; 2 else n * factorial(n-1)
+
+factorial(5)
+# [0.00000044s] factorial(1) -&gt; 1
+# [0.00011111s] factorial(2) -&gt; 2
+# [0.00022622s] factorial(3) -&gt; 6
+# [0.00030844s] factorial(4) -&gt; 24
+# [0.00042222s] factorial(5) -&gt; 120
+# 120</code></pre><p>如果想让装饰器能接受参数，那就要再嵌套一层</p><pre><code class="python">import time
+from functools import wraps
+
+DEFAULT_FMT = &#39;[{elapsed:.8f}s] {name}({all_args_str}) -&gt; {result}&#39;
+
+def clock(fmt=DEFAULT_FMT):
+    def decorate(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            t0 = time.perf_counter()
+            result = func(*args, **kwargs)
+            elapsed = time.perf_counter() - t0
+            name = func.__name__
+            args_str = &#39;, &#39;.join(repr(arg) for arg in args)
+            kwargs_str = &#39;, &#39;.join(f&#39;{k}={w}&#39; for k, w in sorted(kwargs.items()))
+            all_args_str = &#39;, &#39;.join(astr for astr in [args_str, kwargs_str] if astr)
+            print(fmt.format(**locals()))
+            return result
+        return wrapper
+    return decorate
+
+@clock()
+def factorial_default_fmt(n: int) -&gt; int:
+    return 1 if n &lt; 2 else n * factorial_default_fmt(n-1)
+
+@clock(&#39;{name}: {elapsed}s&#39;)
+def factorial_customed_fmt(n: int) -&gt; int:
+    return 1 if n &lt; 2 else n * factorial_customed_fmt(n-1)
+
+factorial_default_fmt(3)
+# [0.00000044s] factorial_default_fmt(1) -&gt; 1
+# [0.00009600s] factorial_default_fmt(2) -&gt; 2
+# [0.00018133s] factorial_default_fmt(3) -&gt; 6
+# 6
+factorial_customed_fmt(3)
+# factorial_customed_fmt: 4.444450496521313e-07s
+# factorial_customed_fmt: 9.733346314533264e-05s
+# factorial_customed_fmt: 0.0001831113553407704s
+# 6</code></pre><p>在 django 中，可以通过装饰器对函数视图进行功能增强（比如@login_required 进行登录的权限校验，@cache_page 进行视图的缓存等）</p><p><strong>上下文管理器</strong><br>用于资源的获取与释放，以代替 try-except 语句</p><p>常用于文件 IO，锁的获取与释放，数据库的连接与断开等</p><pre><code class="python"># try:
+#     f = open(input_path)
+#     data = f.read()
+# finally:
+#     f.close()
+with open(input_path) as f:
+    data = f.read()</code></pre><p>其实在 pathlib 里已经给我们封装好了文件 IO 方法</p><pre><code class="python"># with open(&#39;file&#39;) as i:
+#     data = i.read()
+from pathlib import Path
+data = Path(&#39;file&#39;).read_text()</code></pre><p>至于上下文管理器的实现，可以用@contextmanager</p><pre><code class="python">from contextlib import contextmanager
+
+@contextmanager
+def open_write(filename):
+    try:
+        f = open(filename, &#39;w&#39;)
+        yield f
+    finally:
+        f.close()
+
+with open_write(&#39;onegai.txt&#39;) as f:
+    f.write(&#39;Dagakotowaru!&#39;)</code></pre><p><strong>多重继承</strong></p><p>在 django 中经常要处理类的多重继承的问题，这时就要用到 super 函数</p><p>如果单单认为 super 仅仅是“调用父类的方法”，那就错了</p><p>在继承单个类的情况下，可以认为 super 是调用父类的方法（ES6 里面亦是如此）</p><p>但多重继承就不一样了，因为方法名可能会有冲突，所以 super 就不能单指父类了</p><p><strong>在 Python 中，super 指的是 MRO 中的下一个类</strong>，用来解决多重继承时父类的查找问题</p><p>MRO 是啥？Method Resolution Order（方法解析顺序）</p><p>看完下面的例子，就会理解了</p><pre><code class="python">class A:
+    def __init__(self):
+        print(&#39;A&#39;)
+
+class B(A):
+    def __init__(self):
+        print(&#39;enter B&#39;)
+        super().__init__()
+        print(&#39;leave B&#39;)
+
+class C(A):
+    def __init__(self):
+        print(&#39;enter C&#39;)
+        super().__init__()
+        print(&#39;leave C&#39;)
+
+class D(B, C):
+    pass
+
+d = D()
+# enter B
+# enter C
+# A
+# leave C
+# leave B
+print(d.__class__.__mro__)
+# (&lt;class &#39;__main__.D&#39;&gt;, &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;, &lt;class &#39;object&#39;&gt;)</code></pre><p>首先，因为 D 继承了 B 类，所以调用 B 类的<strong>init</strong>，打印了enter B</p><p>打印enter B后的 super 寻找 MRO 中的 B 的下一个类，也就是 C 类，并调用其<strong>init</strong>，打印enter C</p><p>打印enter C后的 super 寻找 MRO 中的 C 的下一个类，也就是 A 类，并调用其<strong>init</strong>，打印A</p><p>打印A后回到 C 的<strong>init</strong>，打印leave C</p><p>打印leave C后回到 B 的<strong>init</strong>，打印leave B</p><p><strong>特殊方法</strong><br>在 django 中，定义 model 的时候，希望 admin 能显示 model 的某个字段而不是 XXX Object，那么就要定义好<strong>str</strong></p><p>每当你使用一些内置函数时，都是在调用一些特殊方法，例如 len()调用了<strong>len</strong>(), str()调用<strong>str</strong>()等</p><p>以下实现一个 2d 数学向量类，里面有多个特殊方法</p><pre><code class="python">from math import hypot
+
+class Vector2d:
+
+    # 限制允许绑定的属性
+    __slots__ = (&#39;__x&#39;, &#39;__y&#39;)
+
+    # 实例创建
+    def __init__(self, x, y):
+        self.__x = float(x)
+        self.__y = float(y)
+
+    # 前双下划线是私有属性，property装饰是只读属性
+    @property
+    def x(self):
+        return self.__x
+
+    @property
+    def y(self):
+        return self.__y
+
+    # 可迭代对象
+    def __iter__(self):
+        yield from (self.x, self.y)
+
+    # 字符串表示形式
+    def __repr__(self) -&gt; str:
+        return f&#39;{type(self).__name__}({self.x}, {self.y})&#39;
+
+    # 数值转换 - 绝对值
+    def __abs__(self) -&gt; float:
+        return hypot(self.x, self.y)
+
+    # 数值转换 - 布尔值
+    def __bool__(self) -&gt; bool:
+        return bool(abs(self))
+
+    # 算术运算符 - 加
+    def __add__(self, other):
+        x = self.x + other.x
+        y = self.y + other.y
+        return Vector2d(x, y)
+
+    # 算术运算符 - 乘
+    def __mul__(self, scalar: float):
+        return Vector2d(self.x * scalar, self.y * scalar)
+
+    # 比较运算符 - 相等
+    def __eq__(self, other):
+        return tuple(self) == tuple(other)
+
+    # 可散列
+    def __hash__(self):
+        return hash(self.x) ^ hash(self.y)
+
+v = Vector2d(3, 4)
+
+# __slots__限制了允许绑定的属性，只能是x或y
+v.z = 1
+# Traceback (most recent call last):
+#   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+# AttributeError: &#39;Vector2d&#39; object has no attribute &#39;z&#39;
+
+# 由于x属性只读，因此无法再次赋值
+v.x = 1
+# Traceback (most recent call last):
+#   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+# AttributeError: can&#39;t set attribute
+
+# iter(v) =&gt; v.__iter__()
+x, y = v
+# x为3, y为4
+
+# repr(v) =&gt; v.__repr__()
+v
+# Vector2d(3, 4)
+
+# abs(v) =&gt; v.__abs__()
+abs(v)
+# 5.0
+
+# bool(v) =&gt; v.__bool__()
+bool(v)
+# True
+
+# v1 + v2  =&gt; v1.__add__(v2)
+v1 = Vector2d(1, 2)
+v2 = Vector2d(3, 4)
+v1 + v2
+# Vector2d(4, 6)
+
+# v * 3  =&gt; v.__mul__(3)
+v * 3
+# Vector2d(9, 12)
+
+# v1 == v2 =&gt; v1.__eq__(v2)
+v1 = Vector2d(1, 2)
+v2 = Vector2d(1, 2)
+v1 == v2
+# True
+
+# hash(v) =&gt; v.__hash__()
+hash(v)
+# 7
+v1 = Vector2d(1, 2)
+v2 = Vector2d(3, 4)
+set([v1, v2])
+# {Vector2d(1.0, 2.0), Vector2d(3.0, 4.0)}</code></pre><p>如果把 Vector 改造为多维向量呢？关键就是要实现序列协议（<strong>len</strong>和<strong>getitem</strong>）</p><p>协议：本质上是<a href="https://baike.baidu.com/item/%E9%B8%AD%E5%AD%90%E7%B1%BB%E5%9E%8B/10845665?fr=aladdin" target="_blank" rel="noopener">鸭子类型</a>语言使用的非正式接口</p><p>不仅如此，还要实现多分量的获取以及散列化</p><pre><code class="python">from array import array
+import reprlib
+import math
+import numbers
+import string
+from functools import reduce
+from operator import xor
+from itertools import zip_longest
+import numbers
+from fractions import Fraction as F
+
+class Vector:
+    typecode = &#39;d&#39;
+    shortcut_names = &#39;xyzt&#39;
+
+    def __init__(self, components):
+        self._components = array(self.typecode, components)
+
+    def __iter__(self):
+        return iter(self._components)
+
+    def __repr__(self):
+        components = reprlib.repr(self._components)
+        components = components[components.find(&#39;[&#39;):-1]
+        return f&#39;{type(self).__name__}({components})&#39;
+
+    def __str__(self):
+        return str(tuple(self))
+
+    def __eq__(self, other):
+        return tuple(self) == tuple(other)
+
+    def __bool__(self):
+        return bool(abs(self))
+
+    # 序列协议 - 获取长度
+    def __len__(self):
+        return len(self._components)
+
+    # 序列协议 - 索引取值
+    def __getitem__(self, index):
+        cls = type(self)  # Vector
+        if isinstance(index, slice):  # 索引是slice对象，则返回Vector实例
+            return cls(self._components[index])
+        elif isinstance(index, numbers.Integral):  # 索引是整数类型，则返回_components中对应的数字
+            return self._components[index]
+        else:
+            raise TypeError(f&#39;{cls.__name__} indices must be integers.&#39;)
+
+    # 属性访问，获取分量的值
+    def __getattr__(self, name):
+        cls = type(self)
+        if len(name) == 1:
+            pos = cls.shortcut_names.find(name)
+            if 0 &lt;= pos &lt; len(self._components):
+                return self._components[pos]
+        raise AttributeError(f&#39;{cls.__name__} has no attribute {name}&#39;)
+
+    # 属性设置，给分量设值时会抛出异常，使向量是不可变的
+    def __setattr__(self, name, value):
+        cls = type(self)
+        if len(name) == 1:
+            if name in string.ascii_lowercase:
+                raise AttributeError(f&quot;can&#39;t set attribute &#39;a&#39; to &#39;z&#39; in {cls.__name__}&quot;)
+        super().__setattr__(name, value)
+
+    # 比较所有分量，都相等才算两向量相等
+    def __eq__(self, other):
+        return len(self) == len(other) and all(a == b for a, b in zip(self, other))
+
+    # 散列化
+    def __hash__(self):
+        hashes = map(hash, self._components)
+        return reduce(xor, hashes, 0)
+
+    # 绝对值
+    def __abs__(self):
+        return math.sqrt(sum(x ** 2 for x in self))
+
+    # 取正
+    def __pos__(self):
+        return Vector(self)
+
+    # 取负
+    def __neg__(self):
+        return Vector(-x for x in self)
+
+    # 加 (减法__sub__的实现与之类似，略)
+    def __add__(self, other):
+        try:
+            return Vector(a + b for a, b in zip_longest(self, other, fillvalue=0.0))
+        except TypeError:
+            return NotImplemented
+
+    # 反向加（a+b中，如果a没有__add__或返回NotImplemented，则检查b是否有__radd__，有则调用之）
+    def __radd__(self, other):
+        return self + other
+
+    # 乘 (除法__truediv__的实现与之类似，略)
+    def __mul__(self, scalar):
+        return Vector(n * scalar for n in self) if isinstance(scalar, numbers.Real) else NotImplemented
+
+    # 反向乘
+    def __rmul__(self, scalar):
+        return self * scalar
+
+    # 中缀运算符@ - 点积
+    def __matmul__(self, other):
+        try:
+            return sum(a * b for a, b in zip(self, other))
+        except TypeError:
+            return NotImplemented
+
+    # 反向中缀运算符@
+    def __rmatmul__(self, other):
+        return self @ other
+
+v = Vector(range(7))
+v
+# Vector([0.0, 1.0, 2.0, 3.0, 4.0, ...])
+
+v[1:3]
+# Vector([1.0, 2.0])
+
+v[-1]
+# 6.0
+
+v[1,3]
+# Traceback (most recent call last):
+#   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+#   File &quot;&lt;stdin&gt;&quot;, line 39, in __getitem__
+# TypeError: Vector indices must be integers.
+
+v.x, v.y, v.z
+# (0.0, 1.0, 2.0)
+
+v.x = 1
+# Traceback (most recent call last):
+#   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+#   File &quot;&lt;stdin&gt;&quot;, line 62, in __setattr__
+# AttributeError: can&#39;t set attribute &#39;a&#39; to &#39;z&#39; in Vector
+
+v1 = Vector((3, 4, 5))
+v2 = Vector((6, 7))
+
+v1 == v2
+# False
+
+set([v1, v2])
+# {Vector([6.0, 7.0]), Vector([3.0, 4.0, 5.0])}
+
+abs(v)
+# 9.539392014169456
+
++v
+# Vector([0.0, 1.0, 2.0, 3.0, 4.0, ...])
+
+-v
+# Vector([-0.0, -1.0, -2.0, -3.0, -4.0, ...])
+
+v1 + v2
+# Vector([9.0, 11.0, 5.0])
+
+v * 3
+# Vector([0.0, 3.0, 6.0, 9.0, 12.0, ...])
+
+v * F(1, 2)
+# Vector([0.0, 0.5, 1.0, 1.5, 2.0, ...])
+
+v1 @ v2
+# 46.0</code></pre><p>想了解所有的特殊方法可查阅<a href="https://docs.python.org/3/reference/datamodel.html#special-method-names" target="_blank" rel="noopener">官方文档</a>,以下列举些常用的：</p><pre><code class="python">字符串表示形式：__str__, __repr__
+数值转换：__abs__, __bool__, __int__, __float__, __hash__
+集合模拟：__len__, __getitem__, __setitem__, __delitem__, __contains__
+迭代枚举：__iter__, __reversed__, __next__
+可调用模拟：__call__
+实例创建与销毁：__init__, __del__
+属性访问：__getattr__, __setattr__
+运算符相关：__add__, __radd__, __mul__, __rmul__, __matmul__, __rmatmul__, ...</code></pre><p><strong>类方法和静态方法</strong><br>@classmethod 是类方法，它定义操作类的方法，也就是说会将类绑定给方法，而不是实例</p><p>@staticmethod 是静态方法，啥都不绑定，一般用来给类绑定各种工具方法（不涉及对实例和类的操作）</p><p>在 django 中，我们经常要在视图函数中对模型类进行各种查询</p><p>然而，很多查询都是重复的代码，根据 DRY 原则，它们都是可以被封装的</p><p>那么，如果我们要给模型类封装一些查询操作，就要用到@classmethod</p><p>以下是 Post 类，里面定义了 latest_posts 方法用来获取最新的几个 Post</p><p>这样在视图函数中，就能直接调用该方法进行查询，节省了不少代码</p><pre><code class="python">class Post(models.Model):
+    STATUS_NORMAL = 1
+    STATUS_DELETE = 0
+    STATUS_DRAFT = 2
+    STATUS_ITEMS = (
+        (STATUS_NORMAL, &#39;正常&#39;),
+        (STATUS_DELETE, &#39;删除&#39;),
+        (STATUS_DRAFT, &#39;草稿&#39;),
+    )
+    ...
+    status = models.PositiveIntegerField(_(&quot;状态&quot;), choices=STATUS_ITEMS, default=STATUS_NORMAL)
+    created_time = models.DateTimeField(_(&quot;创建时间&quot;), auto_now_add=True)
+    ...
+
+    @classmethod
+    def latest_posts(cls, limit=None):
+        queryset = cls.objects.filter(status=cls.STATUS_NORMAL).order_by(&#39;-created_time&#39;)
+        if limit:
+            queryset = queryset[:limit]
+        return queryset</code></pre><p><strong>描述符</strong><br>实现了<strong>set</strong>或<strong>get</strong>协议的类就是描述符</p><p>set 和 get 代表存和取，因此描述符是一种对多个类属性运用相同存取逻辑的一种方式</p><p>例如 django 的 ORM 中的字段类型是描述符，用来把数据库记录中的字段数据与 Python 对象的属性对应起来</p><p>以下实现一个简单的描述符类，用来在读写属性时验证属性的正确性</p><pre><code class="python">class Validator:
+    def __init__(self, storage_name):
+        self.storage_name = storage_name
+
+    def __set__(self, instance, value):
+        if not isinstance(value, int):
+            raise ValueError(&#39;Value must be an integer&#39;)
+        if value &gt; 200:
+            raise ValueError(&#39;Value must be under 200&#39;)
+
+class Person:
+    age = Validator(&#39;age&#39;)
+
+    def __init__(self, age):
+        self.age = age
+
+person = Person(age=100)
+person.age = &#39;young&#39;
+# Traceback (most recent call last):
+# ValueError: Value must be an integer
+person.age = 201
+# Traceback (most recent call last):
+# ValueError: Value must be under 200</code></pre><p><strong>元类</strong></p><p>进入元类这个概念之前，我们先回顾一下 type()这个函数，不，其实它是个类</p><p>通过 type()，我们可以获取一个对象所属的类，但通过 help 函数，发现 type()居然也可以用来创建类！</p><pre><code class="python">type(name, bases, dict) -&gt; a new type</code></pre><p>name 是新类的名称，bases 是继承的子类，dict 则是新类的属性名与其对应值的字典</p><pre><code class="python">class A:
+    a = 1
+    def foo(self):
+        return self.a * 2
+
+# 以上类的创建等价于
+A = type(&#39;A&#39;, (object, ), {&#39;a&#39;: 1, &#39;foo&#39;: lambda self: self.a * 2})</code></pre><p>那么什么是元类呢？</p><p>平时我们用类来创建对象，但一切类都继承了对象，说白了类也是对象，而元类就是用来创建类对象的类</p><p>说白了，元类就是制造类的工厂</p><pre><code class="python">&#39;alphardex&#39;.__class__
+# &lt;class &#39;str&#39;&gt;
+&#39;alphardex&#39;.__class__.__class__
+# &lt;class &#39;type&#39;&gt;</code></pre><p>通过以上的例子我们知道 type 就是用来创造一切类的元类，它是 Python 内置的元类</p><p>既然有内置的元类，也意味着你也可以自定义元类</p><p>以下实现一个元类，用来把类的所有非私有属性自动转换为大写（不已_开头的属性都是非私有的）</p><p>思路很简单：把属性和对应的值字典(attrs)里的非私有属性键改为大写(upper)就行了</p><pre><code class="python">class UpperAttrMeta(type):
+    def __new__(cls, name, bases, attrs):
+        &quot;&quot;&quot;
+        __init__方法用来初始化对象并传入参数
+        而__new__方法专门用来创建对象（显然这里我们要创建一个类对象并定制它）
+        &quot;&quot;&quot;
+        upper_attrs = {k.upper() if not k.startswith(&#39;_&#39;) else k: v for k, v in attrs.items()}
+        return super().__new__(cls, name, bases, upper_attrs)
+
+class Foo(metaclass=UpperAttrMeta):
+    name = &#39;alphardex&#39;
+    __love = &#39;unknown&#39;
+
+f = Foo()
+f.NAME
+# &#39;alphardex&#39;
+f._Foo__love
+# &#39;unknown&#39;</code></pre><p>元类的最经典的用途就是 ORM 的实现，以 django 的 ORM 为例</p><pre><code class="python">class Person(models.Model):
+    name = models.CharField(max_length=30)
+    age = models.IntegerField()
+
+p = Person(name=&#39;alphardex&#39;, age=&#39;24&#39;)
+p.age
+# 24</code></pre><p>如果你访问一个模型实例的属性（例如这里的 age），你并不会得到什么 IntegerField()，而是得到了 24 这个数字，这就是元类的作用</p><p>元类平时很少用到，如果要动态修改类的属性，可以用猴子补丁（直接修改类方法）或者类装饰器</p><p>当然，这并不代表元类没什么用，想用到它的时候自然会用到的</p><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/python">python</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"><br><br><div id="vcomments" style="width:90%;margin:0 auto"></div><script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script defer src="//unpkg.com/valine/dist/Valine.min.js"></script><script>var notify=!1,verify=!1,oldLoad=window.onload;window.onload=function(){new Valine({el:"#vcomments",notify:notify,verify:verify,app_id:"Q7daliAwM6QkVFJwlwVmU12t-gzGzoHsz",app_key:"OWkCjqwgMVA17MQI9vOGwkru",placeholder:"说点什么",avatar:"retro",meta:["nick","mail","link"],pageSize:"10"}),oldLoad&&oldLoad()}</script><noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments powered by Valine.</a></noscript></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">搜索</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">关键词</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><b>Fluid</b></a><br>&nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp; &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 <span id="busuanzi_value_site_uv"></span> 人&nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  linenums"),prettyPrint()})</script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","Python进阶&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>anchors.options = {
       placement: "right",
       visible: "false",
       
